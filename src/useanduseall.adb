@@ -1,6 +1,10 @@
-procedure Useanduseall is
+with Ada.Text_IO;
+with Card;
 
+procedure Useanduseall is
+   A_Card : Card.Card := Card.Make(1, Card.Clubs);
 begin
-   --  Insert code here.
-   null;
+   Card.Display(A_Card);
+   A_Card := Card."+"(A_Card);
+   Card.Display(A_Card);
 end Useanduseall;
